@@ -8,7 +8,7 @@ on:
       - main
 
 # 이벤트 발생 시 동작해야 할 작업 정의
-jobs:
+jobs: 
   deploy:
     runs-on: ubuntu-latest
 
@@ -19,7 +19,7 @@ jobs:
       # Github Actions 워크플로우에서 Nginx 서버로 
       # 복사하기 위한 작업을 실행하는 과정
       - name: Copy files to Nginx server
-      - uses: appleboy/scp-action@v0.1.7
+        uses: appleboy/scp-action@v0.1.7
         with:
           host: ${{ secrets.PUBLIC_HOST }}
           username: ${{ secrets.PUBLIC_USER }}
